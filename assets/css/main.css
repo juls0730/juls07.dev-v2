@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+	background-color: #191819;
+}
+
+header {
+	background-image: url(https://images.unsplash.com/photo-1524413840807-0c3cb6fa808d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.font-jetbrains {
+	font-family: 'JetBrains Mono', monospace;
+}
+
+.font-rhd {
+	font-family: 'Red Hat Display', sans-serif;
+}
+
+.love {
+	text-decoration: underline;
+	text-decoration-color: #EB0066;
+}
+
+.love::before,
+.love::after {
+	content: '❤';
+	position: absolute;
+	pointer-events: none;
+	opacity: 0;
+	transition: opacity 650ms;
+}
+
+.love::after {
+	margin-left: 4px;
+	animation-name: floating;
+	animation-duration: 2.35s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+.love::before {
+	margin-left: -24px;
+	animation-name: floatingButDownMore;
+	animation-duration: 2.025s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+.love:hover::after, .love:active::after, .love:focus::after {
+	opacity: 1;
+}
+
+.love:hover::before, .love:active::before, .love:focus::before {
+	opacity: 1;
+}
+
+@keyframes floating {
+	0% {
+		transform: translate(0, -5px) rotate(0turn);
+	}
+
+	25% {
+		transform: translate(0, -11px) rotate(0.0425turn);
+	}
+
+	50% {
+		transform: translate(0, -17px) rotate(0turn);
+	}
+
+	75% {
+		transform: translate(0, -11px) rotate(-0.05turn);
+	}
+
+	100% {
+		transform: translate(0, -5px) rotate(0turn);
+	}
+}
+
+@keyframes floatingButDownMore {
+	0% {
+		transform: translate(0, 2px) rotate(0turn);
+	}
+
+	25% {
+		transform: translate(0, -4px) rotate(-0.05turn);
+	}
+
+	50% {
+		transform: translate(0, -10px) rotate(0turn);
+	}
+
+	75% {
+		transform: translate(0, -4px) rotate(0.0375turn);
+	}
+
+	100% {
+		transform: translate(0, 2px) rotate(0turn);
+	}
+}
+
+.main-content {
+	column-count: 12;
+}
