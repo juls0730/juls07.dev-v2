@@ -1,5 +1,5 @@
 ---
-title: My nuxtjs + trpc fullstack web app
+title: Rebuilding my personal website!
 description: My experiences with nuxtjs 3 and tRPC
 image: 
     src: '/images/archlinux.png'
@@ -15,13 +15,12 @@ head:
     - name: 'copyright'
       content: '© 2022 juls07'
 date: 2022-09-20
-_draft: true
+_draft: false
 tags:
   - web dev
   - fullstack development
   - nuxtjs 3
-  - tRPC
-  - redis
+  - supabase
 ---
 
 Recently I've been working with nuxtjs 3 and tTRPC. I've heard a lot of things about nuxtjs 3 and tRPC lately, mostly bad with nuxtjs 3 and mostly good with trpc. These are not technoligies I've been interested in working with for a while

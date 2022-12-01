@@ -6,7 +6,7 @@
 				class="p-6 bg-[#12121233] justify-center grid sm:grid-cols-12 gap-5 items-center sm:justify-start w-full h-full backdrop-blur-md backdrop-saturate-[1.15]">
 				<div
 					class="sm:h-32 sm:!col-start-2 sm:col-span-8 md:col-span-6 lg:col-span-5 w-32 sm:w-fit max-h-full md:h-40 items-center grid grid-rows-1 grid-cols-1 sm:grid-cols-2 drop-shadow-md">
-					<img src="~/assets/pictues/juls07.png"
+					<img alt="juls07 profile picture" src="~/assets/pictues/juls07.png"
 						class="h-32 md:h-40 max-h-full rounded-full mb-3 sm:mb-0 sm:mr-2" />
 					<div class="grid grid-rows-5 grid-cols-1 h-fit">
 						<h1 class="text-4xl md:text-5xl row-span-3 font-jetbrains">Juls07</h1>
@@ -21,7 +21,7 @@
 				<h2 class="md:text-4xl text-3xl mb-1">About me</h2>
 				<hr class="border-2 border-[#EB0066] rounded-md w-7/12 min-w-[200px] max-w-xs lg:max-w-sm mb-1" />
 				<p class="max-w-md sm:max-w-xl md:max-w-3xl lg:max-w-4xl mb-4">
-					Hi there, I'm juls07, I am 14 years old and I <span tabindex="1"
+					Hi there, I'm juls07, I am 14 years old and I <span tabindex="0"
 						class="love">love</span> web
 					development. I first dabbled in web development
 					when I was ten, and here we are today! I mainly use

@@ -5,12 +5,11 @@
 			<div v-for="article in articles"
 				:key="article._path"
 				class="mb-5 px-1.5">
-				<p v-show="false">{{ article.date }}</p>
-				<div class="text-white rounded-lg border border-neutral-700 bg-zinc-800 shadow-md">
-					<img v-if="article.img"
-						:src="article.img"
+				<div class="text-white bg-zinc-800 max-h-[563.25px] overflow-hidden rounded-lg border border-neutral-700 shadow-md">
+					<img v-if="article.image.src"
+						:src="article.image.src"
 						class="w-full rounded-tl-lg rounded-tr-lg" />
-					<div class="p-3">
+					<div class="p-3 overflow-hidden pt-2 before:w-full before:h-2/6 before:absolute before:left-0 before:bottom-0 before:bg-gradient-to-b before:from-transparent before:to-zinc-800 mb-1 pb-1 relative">
 						<h3>
 							<nuxt-link class="text-lg"
 								:to="article._path">
@@ -23,15 +22,17 @@
 						<p class="text-zinc-400 dark:text-zinc-400">
 							{{ article.description }}
 						</p>
-						<p style="max-height: 224px;"
-							class="overflow-hidden pt-2 before:w-full before:h-2/6 before:absolute before:left-0 before:bottom-0 before:bg-gradient-to-b before:from-transparent before:to-zinc-800 mb-1 pb-1 relative text-zinc-200">
-							<ContentDoc :value="article" :path="article._path" v-slot="{ doc }">
+						<p
+							class="text-zinc-200 max-h-56">
+							<ContentDoc :value="article"
+								:path="article._path"
+								v-slot="{ doc }">
 								<div class="flex flex-wrap w-full gap-2 justify-start mb-2">
 									<tagButton v-for="tag in doc.tags"
 										:name="tag"
 										:iconName='tag' />
 								</div>
-								<ContentRenderer :value="doc" />
+								<ContentRenderer :value="doc" :excerpt="true" />
 							</ContentDoc>
 						</p>
 					</div>
@@ -41,7 +42,7 @@
 	</div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 const { data: articles } = await useAsyncData('posts-list', () => queryContent('/blog')
 	.where({ _draft: false })
 	.sort({ date: -1, $numeric: true, })
@@ -49,29 +50,10 @@ const { data: articles } = await useAsyncData('posts-list', () => queryContent('
 );
 </script>
 
-<script>
+<script lang="ts">
 export default {
 	head: {
-		title: "Juls07",
-		htmlAttrs: {
-			lang: "en",
-		},
-		meta: [
-			{ charset: "utf-8" },
-			{ name: "viewport", content: "width=device-width, initial-scale=1" },
-			{ name: "google", content: "notranslate" },
-			{
-				hid: "description",
-				name: "description",
-				content: "Juls07 is a game developer, web developer and pixel artist.",
-			},
-			{ property: "og:type", content: "website" },
-			{ property: "og:image", content: "/og.png" },
-			{ property: "og:title", content: "Juls07" },
-			{ property: "og:description", content: "Juls07's website" },
-			{ property: "og:url", content: "https://juls07.dev" },
-		],
-		link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
-	},
-};
+		title: 'Juls07'
+	}
+}
 </script>

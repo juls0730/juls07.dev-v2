@@ -1,9 +1,19 @@
 ---
 title: How I made my site fast
 description: How I made my social media site fast
-img: /images/how-i-made-my-site-fast.png
-alt: how i made snowball fast
-writer: juls07
+image: 
+    src: '/images/how-i-made-my-site-fast.png'
+    alt: 'How I made my site fast'
+head:
+  meta:
+    - name: 'keywords'
+      content: 'web dev, fullstack development, angular, nodejs, redis'
+    - name: 'robots'
+      content: 'index, follow'
+    - name: 'author'
+      content: 'juls07'
+    - name: 'copyright'
+      content: '© 2022 juls07'
 date: 2022-05-22
 tags:
   - web dev
@@ -12,7 +22,7 @@ tags:
   - nodejs
   - redis
 ---
-So yesterday I talked about my social media site that I'm working on. Today I implemented redis, a memory store that I used to reduce requests at most by 48ms. First when I tried to use redis I just used the `redis` package off of npmjs because it only makes sense but when I tried to get a key with the name of `user-cache-[userId]` It failed for some reason, I still dont know why it failed but using the `ioredis` package and everything started working, not user data processing, what I used redis to cache since it's a terrible for loop that executes database requests for every post, but now it's all stored in memory. I still want to add TTL since my VPS that I intend on deploying my site on for production only has 1GB of RAM but I'm not sure how to do that. If you saw my blog post from [yesterday](/blog/what-ive-been-doing) then you'll know what my user code used to look like, now it looks like this.
+So yesterday I talked about my social media site that I'm working on. Today I implemented redis, a memory store that I used to reduce requests at most by 48ms. First when I tried to use redis I just used the `redis` package off of npmjs because it only makes sense but when I tried to get a key with the name of `user-cache-[userId]` It failed for some reason, I still dont know why it failed but using the `ioredis` package and everything started working, not user data processing, what I used redis to cache since it's a terrible for loop that executes database requests for every post, but now it's all stored in memory.<!--more--> I still want to add TTL since my VPS that I intend on deploying my site on for production only has 1GB of RAM but I'm not sure how to do that. If you saw my blog post from [yesterday](/blog/what-ive-been-doing) then you'll know what my user code used to look like, now it looks like this.
 
 ```js[post.js]
 for (let i = 0; i < replies.length; i++) {

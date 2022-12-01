@@ -14,20 +14,21 @@ export default {
 				'docker': 'docker-icon',
 				'linux': 'linux-tux',
 				'bittorrent': 'webtorrent',
-				'web-server': 'nginx'
+				'web-server': 'nginx',
+				'supabase': 'supabase-icon'
 			},
 		}
 	},
-    props: ['iconName', 'name']
+	props: ['iconName', 'name']
 }
 </script>
 
 <template>
-	<button :aria-label="name"
-		class="font-inter md:text-lg w-fit max-h-9 min-w-fit bg-zinc-800 border border-zinc-700/30 py-1 px-2 rounded shadow flex items-center">
+	<div :aria-label="name"
+		class="font-inter select-none md:text-lg w-fit max-h-9 min-w-fit bg-zinc-800 border border-zinc-700/30 py-1 px-2 rounded shadow flex items-center">
 		<Icon size="20"
 			class="mr-2"
 			:name="('logos:' + (iconMap[iconName.toLowerCase().split(' ').join('-')] || iconName.toLowerCase()))" />
-		{{name}}
-	</button>
+		{{ name }}
+	</div>
 </template>

@@ -3,6 +3,19 @@ import { defineNuxtConfig } from 'nuxt/config';
 export default defineNuxtConfig({
 	target: 'static',
 
+	app: {
+		head: {
+			title: 'Juls07',
+			meta: [
+				{ charset: 'utf-8' },
+				{ name: 'viewport', content: 'width=device-width, initial-scale=1' },
+
+				// hid is used as unique identifier. Do not use `vmid` for it as it will not work
+				{ hid: 'description', name: 'description', content: 'Juls07 is a fullstack web developer' }
+			]
+		},
+	},
+
 	css: ['~/assets/css/main.css'],
 
 	postcss: {
@@ -22,6 +35,7 @@ export default defineNuxtConfig({
 
 	content: {
 		documentDriven: true,
+		
 		highlight: {
 			theme: {
 				default: 'github-dark'

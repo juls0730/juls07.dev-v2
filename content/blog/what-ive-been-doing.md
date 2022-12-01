@@ -1,9 +1,19 @@
 ---
 title: What I've been doing
 description: Stuff I've been doing recently
-img: /images/what-ive-been-doing.png
-alt: what ive been doing
-writer: juls07
+image: 
+    src: '/images/what-ive-been-doing.png'
+    alt: "What I've been doing recently"
+head:
+  meta:
+    - name: 'keywords'
+      content: 'web dev, fullstack development, angular, nodejs, mongodb'
+    - name: 'robots'
+      content: 'index, follow'
+    - name: 'author'
+      content: 'juls07'
+    - name: 'copyright'
+      content: '© 2022 juls07'
 date: 2022-05-21
 tags:
   - web dev
@@ -13,7 +23,7 @@ tags:
   - mongodb
 ---
 
-So I have been working on a social media site I am currently calling snowballsocial, so far I have users, posts, replies, and likes. Expressjs not having HTTP/2 is slightly annoying and I have kind of thought migrating all of my code to hapi but I'm too lazy to migrate all my code right now, especially since I just "asyncified" it, remaking my code rather than making all new code would probably be easier but I'll do that later. This project I again used mongoDB, I fist used mongodb in my [vuefullstack](https://github.com/juls0730/vuefullstack) app, and I loved it, it's much easier for the kind of projects I use than mySQL. Actually targeting a production site rather than just having fun like with my vuefullstack app or my rails-forum, etc. make me worry about alot more thigs like SEO, I tried to add OG tags to the post-show tag just showing post data but it doesnt work because the tags are added after the data loads.
+So I have been working on a social media site I am currently calling snowballsocial, so far I have users, posts, replies, and likes. Expressjs not having HTTP/2 is slightly annoying and I have kind of thought migrating all of my code to hapi but I'm too lazy to migrate all my code right now, especially since I just "asyncified" it, remaking my code rather than making all new code would probably be easier but I'll do that later.<!--more--> This project I again used mongoDB, I fist used mongodb in my [vuefullstack](https://github.com/juls0730/vuefullstack) app, and I loved it, it's much easier for the kind of projects I use than mySQL. Actually targeting a production site rather than just having fun like with my vuefullstack app or my rails-forum, etc. make me worry about alot more thigs like SEO, I tried to add OG tags to the post-show tag just showing post data but it doesnt work because the tags are added after the data loads.
 <br class="article"/>
 I've gotten a VPS from [linode](linode.com) so I could expose my non-static only page to the internet without exposing my home IP address, making me vulnerable to being doxxed and DDoS attacks. Using nignx I have reverse-proxied my api from port 3001 to 2087, and added ssl certs, and I have used it to server my static site on port 80, I have used nginx before and it's pretty simple to use. Optimizing has been the bain of development so far, making api requests faster, and reducing bundle size, I'm going to focus on api optimizations since its the harder one. My main worry for more than a couple requests is getting posts, since I do a for loop to change userId's to usernames
 ```js
