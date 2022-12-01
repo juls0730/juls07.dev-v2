@@ -1,10 +1,10 @@
 <script>
 export default {
-    props: ['iconSrc', 'name']
+    props: ['iconName', 'name']
 }
 </script>
 <template>
-    <button class="font-inter md:text-lg w-fit min-w-fit bg-zinc-800 py-1 px-2 rounded shadow flex items-center"><img
-            :src="iconSrc"
-            class="mr-2 w-5 h-5" />{{name}}</button>
+    <button :aria-label="name" class="font-inter md:text-lg w-fit max-h-9 min-w-fit bg-zinc-800 border border-zinc-700/30 py-1 px-2 rounded shadow flex items-center">
+        <Icon size="20" class="mr-2" :name="iconName" />
+        {{name}}</button>
 </template>
