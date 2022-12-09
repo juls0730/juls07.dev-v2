@@ -2,7 +2,7 @@
 title: Rebuilding my personal website!
 description: My experiences with nuxtjs 3 and tRPC
 image: 
-    src: '/images/archlinux.png'
+    src: '/images/website-rebuild-draft-1.avif'
     alt: 'Why I chose archlinux'
 head:
   meta:

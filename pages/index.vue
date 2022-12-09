@@ -1,12 +1,13 @@
 <template>
 	<div class="h-screen text-white">
 		<Nav class="absolute z-10" />
-		<header class="w-screen h-3/6 sm:h-2/5 md:h-3/5">
+		<header class="w-full h-3/6 sm:h-2/5 md:h-3/5">
 			<div
 				class="p-6 bg-[#12121233] justify-center grid sm:grid-cols-12 gap-5 items-center sm:justify-start w-full h-full backdrop-blur-md backdrop-saturate-[1.15]">
 				<div
 					class="sm:h-32 sm:!col-start-2 sm:col-span-8 md:col-span-6 lg:col-span-5 w-32 sm:w-fit max-h-full md:h-40 items-center grid grid-rows-1 grid-cols-1 sm:grid-cols-2 drop-shadow-md">
-					<img alt="juls07 profile picture" src="~/assets/pictues/juls07.png"
+					<img alt="juls07 profile picture"
+						src="~/assets/pictues/juls07.png"
 						class="h-32 md:h-40 max-h-full rounded-full mb-3 sm:mb-0 sm:mr-2" />
 					<div class="grid grid-rows-5 grid-cols-1 h-fit">
 						<h1 class="text-4xl md:text-5xl row-span-3 font-jetbrains">Juls07</h1>
@@ -19,52 +20,82 @@
 			<section
 				class="py-6 mb-4 !col-start-2 md:!col-start-3 lg:!col-start-4 lg:col-span-6 md:col-span-8 col-span-10">
 				<h2 class="md:text-4xl text-3xl mb-1">About me</h2>
-				<hr class="border-2 border-[#EB0066] rounded-md w-7/12 min-w-[200px] max-w-xs lg:max-w-sm mb-1" />
+				<hr
+					class="border-2 my-1.5 border-[#EB0066] rounded-md w-7/12 min-w-[200px] max-w-xs lg:max-w-sm mb-1" />
 				<p class="max-w-md sm:max-w-xl md:max-w-3xl lg:max-w-4xl mb-4">
 					Hi there, I'm juls07, I am 14 years old and I <span tabindex="0"
 						class="love">love</span> web
 					development. I first dabbled in web development
 					when I was ten, and here we are today! I mainly use
-					<a
-						href="https://nuxtjs.org">NuxtJs</a> to
+					<a href="https://nuxtjs.org">NuxtJs</a> to
 					build my websites since I absolutely
 					adore Vuejs. For me, I love being able to imagine anything and it to come to life. Finally, go
-					checkout my <a
-						href="https://github.com/juls0730">Github</a> and also my <a
+					checkout my <a href="https://github.com/juls0730">Github</a> and also my <a
 						href="https://twitter.com/julie4055_">Twitter</a>.
 				</p>
 				<h3 class="text-2xl md:text-3xl mb-1">Skills</h3>
 				<section class="flex flex-wrap w-full gap-2 justify-start">
-					<SkillButton name="Javascript"
+					<IconButton name="Javascript"
 						iconName='logos:javascript' />
-					<SkillButton name="Nuxt.js"
+					<IconButton name="Nuxt.js"
 						iconName="logos:nuxt-icon" />
-					<SkillButton name="Ruby on rails"
+					<IconButton name="Ruby on rails"
 						iconName="logos:ruby" />
-					<SkillButton name="php"
+					<IconButton name="php"
 						iconName="logos:laravel" />
-					<SkillButton name="Angular"
+					<IconButton name="Angular"
 						iconName="logos:angular-icon" />
-					<SkillButton name="React"
+					<IconButton name="React"
 						iconName="logos:react" />
-					<SkillButton name="Bash"
+					<IconButton name="Bash"
 						iconName="logos:bash-icon" />
-					<SkillButton name="Tailwindcss"
+					<IconButton name="Tailwindcss"
 						iconName="logos:tailwindcss-icon" />
-					<SkillButton name="Rust"
+					<IconButton name="Rust"
 						iconName="logos:rust" />
-					<SkillButton name="Node.js"
+					<IconButton name="Node.js"
 						iconName="logos:nodejs-icon" />
-					<SkillButton name="Svelte"
+					<IconButton name="Svelte"
 						iconName="logos:svelte-icon" />
-					<SkillButton name="Supabase"
+					<IconButton name="Supabase"
 						iconName="logos:supabase-icon" />
-					<SkillButton name="tRPC"
+					<IconButton name="tRPC"
 						iconName="logos:trpc" />
-					<SkillButton name="Python"
+					<IconButton name="Python"
 						iconName="logos:python" />
-					<SkillButton name="Deno"
+					<IconButton name="Deno"
 						iconName="logos:deno" />
+				</section>
+			</section>
+			<section
+				class="py-6 mb-4 !col-start-2 md:!col-start-3 lg:!col-start-4 lg:col-span-6 md:col-span-8 col-span-10">
+				<h2 class="md:text-4xl text-3xl mb-1">Projects</h2>
+				<section class="w-11/12 sm:w-full mx-auto grid sm:grid-cols-2 md:grid-cols-4 gap-3">
+					<ProjectCard name="PHP Forum"
+						body="This is my attempt at a forum written in php, its not great but it works."
+						:icons="[{ 'icon': 'logos:laravel', 'name': 'php' }]"
+						link1="https://github.com/juls0730/php-forum"
+						button1="Github" />
+					<ProjectCard name="Old Cyansplash.net site"
+						:icons="[{ 'icon': 'logos:nuxt-icon', 'name': 'nuxtjs v2' }]"
+						body="This is the old cyansplash.net site, not amazing but taught me a lot about web development."
+						link1="https://github.com/juls0730/cyansplash.net"
+						button1="Github" />
+					<ProjectCard name="Discord bot 'Echo'"
+						:icons="[{ 'icon': 'logos:javascript', 'name': 'Javascript' }]"
+						body="This is an old discord bot that taught me about the discord API how to make a bot and led me to learning alot about JavaScript, without Echo I most likely would not be a web developer."
+						link1="https://github.com/juls0730/Echo"
+						button1="Github" />
+					<ProjectCard name="juls07.dev"
+						:icons="[{ 'icon': 'logos:nuxt-icon', 'name': 'nuxtjs v2' }, { 'icon': 'logos:tailwindcss-icon', 'name': 'tailwindcss'}]"
+						body="This stie is the site you are currently on, this site is just a place to show off my projects and my skills."
+						link1="https://github.com/juls0730/juls07.dev"
+						button1="Github" />
+					<ProjectCard name="vuefullstack"
+						:icons="[{ 'icon': 'logos:vue', 'name': 'vue v3' }]"
+						body="this is a small forum project I made to mock my ruby on rails forum I am working on but in vuejs."
+						link1="https://github.com/juls0730/vuefullstack"
+						button1="Github" />
 				</section>
 			</section>
 		</main>

@@ -5,7 +5,7 @@
 			<div v-for="article in articles"
 				:key="article._path"
 				class="mb-5 px-1.5">
-				<div class="text-white bg-zinc-800 max-h-[563.25px] overflow-hidden rounded-lg border border-neutral-700 shadow-md">
+				<div class="text-white bg-zinc-800 max-h-[563.25px] h-[563.25px] overflow-hidden rounded-lg border border-neutral-700 shadow-md">
 					<img v-if="article.image.src"
 						:src="article.image.src"
 						class="w-full rounded-tl-lg rounded-tr-lg" />
@@ -28,9 +28,10 @@
 								:path="article._path"
 								v-slot="{ doc }">
 								<div class="flex flex-wrap w-full gap-2 justify-start mb-2">
-									<tagButton v-for="tag in doc.tags"
+									<IconButton v-for="tag in doc.tags"
 										:name="tag"
-										:iconName='tag' />
+										:iconName='tag'
+										isTag="true" />
 								</div>
 								<ContentRenderer :value="doc" :excerpt="true" />
 							</ContentDoc>

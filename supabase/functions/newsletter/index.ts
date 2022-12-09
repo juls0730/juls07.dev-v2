@@ -16,9 +16,11 @@ serve(async (req) => {
   const supabase = createClient(Deno.env.get('SUPABASE_URL'), Deno.env.get('SUPABASE_ANON_KEY'))
 
   const { email, name } = await req.json()
-  if (!name || !email || !emailRegex.test(email)) throw new Error(
+  if (!email || !emailRegex.test(email)) throw new Error(
     'Please provide a valid email address or name'
   )
+
+  const name = email.split('@')[0]
 
   const { data, error } = await supabase
     .from('subscribers')
