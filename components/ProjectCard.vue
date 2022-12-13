@@ -1,21 +1,37 @@
 <script>
-import { LOGICAL_OPERATORS } from '@babel/types';
-import { Icon } from '@iconify/vue';
-
 export default {
-    props: ["name", "body", "icons", "headerIcon"],
+	props: ["name", "icons", "headerIcon", "githubLink", "externalLink"],
 }
 </script>
 
 <template>
-	<div class="bg-[#1a191a] border p-6 col-span-1 md:col-span-2 border-zinc-700/70 shadow-md rounded-lg">
-		<div class="flex" v-if="headerIcon">
-			<!-- <Icon size="64" :name="logo.name" :iconName="logo.icon" /> -->
-			<Icon size="64" :iconName="headerIcon.src" :name="headerIcon.name" />
+	<div class="bg-[#201F20] border p-6 col-span-12 sm:col-span-10 sm:col-start-2 md:col-start-auto md:col-span-6 xl:!col-span-4 h-[494px] border-zinc-700/30 shadow-md rounded-lg">
+		<div class="flex mb-4 items-center"
+			v-if="headerIcon">
+			<Icon size="64"
+				class="text-[#00FFC2]"
+				:name="headerIcon" />
+			<div role="links"
+				class="ml-auto">
+				<a v-if="githubLink"
+					:href="githubLink"
+					class="text-zinc-300/80 hover:text-zinc-200 transition-colors duration-300">
+					<Icon size="38"
+						name="tabler:brand-github" />
+				</a>
+				<a v-if="externalLink"
+					:href="externalLink"
+					class="text-zinc-300/80 hover:text-zinc-200 transition-colors duration-300">
+					<Icon size="38"
+						name="tabler:external-link" />
+				</a>
+			</div>
 		</div>
-		<h4 class="text-xl md:text-2xl mb-1 font-semibold">{{ name }}</h4>
-		<p>{{ body }}</p>
-		<div class="ml-1 my-1.5 flex flex-wrap gap-2"
+		<h4 class="text-xl mb-1 capitalize font-jetbrains">{{ name }}</h4>
+		<div id="body" class="mb-4">
+			<slot />
+		</div>
+		<div class="flex flex-wrap gap-2"
 			v-if="icons">
 			<div v-for="icon in icons">
 				<IconButton size="16"

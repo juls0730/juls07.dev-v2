@@ -33,8 +33,8 @@
 					checkout my <a href="https://github.com/juls0730">Github</a> and also my <a
 						href="https://twitter.com/julie4055_">Twitter</a>.
 				</p>
-				<h3 class="text-2xl md:text-3xl mb-1">Skills</h3>
-				<section class="flex flex-wrap w-full gap-2 justify-start">
+				<h3 class="text-2xl md:text-3xl mb-1.5 ml-0.5">Skills</h3>
+				<section class="flex flex-wrap w-full gap-2 justify-start ml-1">
 					<IconButton name="Javascript"
 						iconName='logos:javascript' />
 					<IconButton name="Nuxt.js"
@@ -67,36 +67,65 @@
 						iconName="logos:deno" />
 				</section>
 			</section>
-			<section
-				class="py-6 mb-4 !col-start-2 md:!col-start-3 lg:!col-start-4 lg:col-span-6 md:col-span-8 col-span-10">
+			<div class="!col-start-2 md:!col-start-3 lg:!col-start-4 lg:col-span-6 md:col-span-8 col-span-10">
 				<h2 class="md:text-4xl text-3xl mb-1">Projects</h2>
-				<section class="w-11/12 sm:w-full mx-auto grid sm:grid-cols-2 md:grid-cols-4 gap-3">
-					<ProjectCard name="PHP Forum"
-						body="This is my attempt at a forum written in php, its not great but it works."
-						:icons="[{ 'icon': 'logos:laravel', 'name': 'php' }]"
-						link1="https://github.com/juls0730/php-forum"
-						button1="Github" />
-					<ProjectCard name="Old Cyansplash.net site"
-						:icons="[{ 'icon': 'logos:nuxt-icon', 'name': 'nuxtjs v2' }]"
-						body="This is the old cyansplash.net site, not amazing but taught me a lot about web development."
-						link1="https://github.com/juls0730/cyansplash.net"
-						button1="Github" />
-					<ProjectCard name="Discord bot 'Echo'"
-						:icons="[{ 'icon': 'logos:javascript', 'name': 'Javascript' }]"
-						body="This is an old discord bot that taught me about the discord API how to make a bot and led me to learning alot about JavaScript, without Echo I most likely would not be a web developer."
-						link1="https://github.com/juls0730/Echo"
-						button1="Github" />
-					<ProjectCard name="juls07.dev"
-						:icons="[{ 'icon': 'logos:nuxt-icon', 'name': 'nuxtjs v2' }, { 'icon': 'logos:tailwindcss-icon', 'name': 'tailwindcss'}]"
-						body="This stie is the site you are currently on, this site is just a place to show off my projects and my skills."
-						link1="https://github.com/juls0730/juls07.dev"
-						button1="Github" />
-					<ProjectCard name="vuefullstack"
-						:icons="[{ 'icon': 'logos:vue', 'name': 'vue v3' }]"
-						body="this is a small forum project I made to mock my ruby on rails forum I am working on but in vuejs."
-						link1="https://github.com/juls0730/vuefullstack"
-						button1="Github" />
-				</section>
+			</div>
+			<section class="pb-6 grid mb-4 col-start-3 col-span-8 grid-cols-12 gap-6 max-w-full">
+				<ProjectCard name="Juls07.dev V2"
+					headerIcon="mdi:nuxt"
+					githubLink="https://github.com/juls0730/vuefullstack"
+					:icons="[{ 'icon': 'logos:nuxt-icon', 'name': 'nuxtjs v3' }, { 'icon': 'logos:supabase-icon', 'name': 'supabase' }]"
+					link1="https://github.com/juls0730/vuefullstack"
+					button1="Github">
+					this is a small forum project I made to mock my ruby on rails forum I am
+					working on but in vuejs.
+				</ProjectCard>
+				<ProjectCard name="PHP Forum"
+					headerIcon="mdi:language-php"
+					githubLink="https://github.com/juls0730/php-forum"
+					:icons="[{ 'icon': 'logos:laravel', 'name': 'php' }]"
+					link1="https://github.com/juls0730/php-forum"
+					button1="Github">
+					This is my attempt at a forum written in php, its not great but it works.
+				</ProjectCard>
+				<ProjectCard name="Cyansplash.net"
+					headerIcon="mdi:nuxt"
+					githubLink="https://github.com/juls0730/cyansplash.net"
+					:icons="[{ 'icon': 'logos:nuxt-icon', 'name': 'nuxtjs v2' }]"
+					link1="https://github.com/juls0730/cyansplash.net"
+					button1="Github">
+					This is the old cyansplash.net site, not amazing but taught me a lot about web
+					development.
+				</ProjectCard>
+				<ProjectCard name="Discord bot 'Echo'"
+					headerIcon="mdi:robot-excited-outline"
+					githubLink="https://github.com/juls0730/Echo"
+					:icons="[{ 'icon': 'logos:javascript', 'name': 'Javascript' }]"
+					link1="https://github.com/juls0730/Echo"
+					button1="Github">
+					This is an old discord bot that taught me about the discord API how to make a
+					bot and led me to learning alot about JavaScript, without Echo I most likely would not be a
+					web
+					developer.
+				</ProjectCard>
+				<ProjectCard name="juls07.dev V1"
+					headerIcon="mdi:nuxt"
+					githubLink="https://github.com/juls0730/juls07.dev"
+					:icons="[{ 'icon': 'logos:nuxt-icon', 'name': 'nuxtjs v2' }, { 'icon': 'logos:tailwindcss-icon', 'name': 'tailwindcss' }]"
+					link1="https://github.com/juls0730/juls07.dev"
+					button1="Github">
+					This stie is the site you are currently on, this site is just a place to show
+					off my projects and my skills.
+				</ProjectCard>
+				<ProjectCard name="vuefullstack"
+					headerIcon="mdi:vuejs"
+					githubLink="https://github.com/juls0730/vuefullstack"
+					:icons="[{ 'icon': 'logos:vue', 'name': 'vue v3' }]"
+					link1="https://github.com/juls0730/vuefullstack"
+					button1="Github">
+					this is a small forum project I made to mock my ruby on rails forum I am
+					working on but in vuejs.
+				</ProjectCard>
 			</section>
 		</main>
 	</div>
