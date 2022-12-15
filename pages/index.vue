@@ -3,7 +3,7 @@
 		<Nav class="absolute z-10" />
 		<header class="w-full h-3/6 sm:h-2/5 md:h-3/5">
 			<div
-				class="p-6 bg-[#12121233] justify-center grid sm:grid-cols-12 gap-5 items-center sm:justify-start w-full h-full backdrop-blur-md backdrop-saturate-[1.15]">
+				class="p-6 bg-[#12121233] justify-center grid sm:grid-cols-12 gap-5 items-center sm:justify-start w-full h-full blur-background">
 				<div
 					class="sm:h-32 sm:!col-start-2 sm:col-span-8 md:col-span-6 lg:col-span-5 w-32 sm:w-fit max-h-full md:h-40 items-center grid grid-rows-1 grid-cols-1 sm:grid-cols-2 drop-shadow-md">
 					<img alt="juls07 profile picture"
@@ -35,94 +35,79 @@
 				</p>
 				<h3 class="text-2xl md:text-3xl mb-1.5 ml-0.5">Skills</h3>
 				<section class="flex flex-wrap w-full gap-2 justify-start ml-1">
-					<IconButton name="Javascript"
+					<IconTag name="Javascript"
 						iconName='logos:javascript' />
-					<IconButton name="Nuxt.js"
+					<IconTag name="Nuxt.js"
 						iconName="logos:nuxt-icon" />
-					<IconButton name="Ruby on rails"
+					<IconTag name="Ruby on rails"
 						iconName="logos:ruby" />
-					<IconButton name="php"
+					<IconTag name="php"
 						iconName="logos:laravel" />
-					<IconButton name="Angular"
+					<IconTag name="Angular"
 						iconName="logos:angular-icon" />
-					<IconButton name="React"
+					<IconTag name="React"
 						iconName="logos:react" />
-					<IconButton name="Bash"
+					<IconTag name="Bash"
 						iconName="logos:bash-icon" />
-					<IconButton name="Tailwindcss"
+					<IconTag name="Tailwindcss"
 						iconName="logos:tailwindcss-icon" />
-					<IconButton name="Rust"
+					<IconTag name="Rust"
 						iconName="logos:rust" />
-					<IconButton name="Node.js"
+					<IconTag name="Node.js"
 						iconName="logos:nodejs-icon" />
-					<IconButton name="Svelte"
+					<IconTag name="Svelte"
 						iconName="logos:svelte-icon" />
-					<IconButton name="Supabase"
+					<IconTag name="Supabase"
 						iconName="logos:supabase-icon" />
-					<IconButton name="tRPC"
+					<IconTag name="tRPC"
 						iconName="logos:trpc" />
-					<IconButton name="Python"
+					<IconTag name="Python"
 						iconName="logos:python" />
-					<IconButton name="Deno"
+					<IconTag name="Deno"
 						iconName="logos:deno" />
 				</section>
 			</section>
 			<div class="!col-start-2 md:!col-start-3 lg:!col-start-4 lg:col-span-6 md:col-span-8 col-span-10">
 				<h2 class="md:text-4xl text-3xl mb-1">Projects</h2>
 			</div>
-			<section class="pb-6 grid mb-4 col-start-3 col-span-8 grid-cols-12 gap-6 max-w-full">
+			<section class="pb-6 grid mb-4 col-start-2 xs:!col-start-3 col-span-10 xs:col-span-8 grid-cols-12 gap-y-6 sm:gap-x-6 max-w-full">
 				<ProjectCard name="Juls07.dev V2"
 					headerIcon="mdi:nuxt"
 					githubLink="https://github.com/juls0730/vuefullstack"
-					:icons="[{ 'icon': 'logos:nuxt-icon', 'name': 'nuxtjs v3' }, { 'icon': 'logos:supabase-icon', 'name': 'supabase' }]"
-					link1="https://github.com/juls0730/vuefullstack"
-					button1="Github">
+					:icons="[{ 'icon': 'logos:nuxt-icon', 'name': 'nuxtjs v3' }, { 'icon': 'logos:supabase-icon', 'name': 'supabase' }]">
 					this is a small forum project I made to mock my ruby on rails forum I am
 					working on but in vuejs.
 				</ProjectCard>
 				<ProjectCard name="PHP Forum"
 					headerIcon="mdi:language-php"
 					githubLink="https://github.com/juls0730/php-forum"
-					:icons="[{ 'icon': 'logos:laravel', 'name': 'php' }]"
-					link1="https://github.com/juls0730/php-forum"
-					button1="Github">
+					:icons="[{ 'icon': 'logos:laravel', 'name': 'php' }]">
 					This is my attempt at a forum written in php, its not great but it works.
 				</ProjectCard>
 				<ProjectCard name="Cyansplash.net"
 					headerIcon="mdi:nuxt"
 					githubLink="https://github.com/juls0730/cyansplash.net"
-					:icons="[{ 'icon': 'logos:nuxt-icon', 'name': 'nuxtjs v2' }]"
-					link1="https://github.com/juls0730/cyansplash.net"
-					button1="Github">
+					:icons="[{ 'icon': 'logos:nuxt-icon', 'name': 'nuxtjs v2' }]">
 					This is the old cyansplash.net site, not amazing but taught me a lot about web
 					development.
 				</ProjectCard>
-				<ProjectCard name="Discord bot 'Echo'"
+				<ProjectCard name="Discord.js bot"
 					headerIcon="mdi:robot-excited-outline"
 					githubLink="https://github.com/juls0730/Echo"
-					:icons="[{ 'icon': 'logos:javascript', 'name': 'Javascript' }]"
-					link1="https://github.com/juls0730/Echo"
-					button1="Github">
-					This is an old discord bot that taught me about the discord API how to make a
-					bot and led me to learning alot about JavaScript, without Echo I most likely would not be a
-					web
-					developer.
+					:icons="[{ 'icon': 'logos:javascript', 'name': 'Javascript' }]">
+					This is one of the first projects that wasn't just a dinky website, this project brought me to where I am today.
 				</ProjectCard>
 				<ProjectCard name="juls07.dev V1"
 					headerIcon="mdi:nuxt"
 					githubLink="https://github.com/juls0730/juls07.dev"
-					:icons="[{ 'icon': 'logos:nuxt-icon', 'name': 'nuxtjs v2' }, { 'icon': 'logos:tailwindcss-icon', 'name': 'tailwindcss' }]"
-					link1="https://github.com/juls0730/juls07.dev"
-					button1="Github">
+					:icons="[{ 'icon': 'logos:nuxt-icon', 'name': 'nuxtjs v2' }, { 'icon': 'logos:tailwindcss-icon', 'name': 'tailwindcss' }]">
 					This stie is the site you are currently on, this site is just a place to show
 					off my projects and my skills.
 				</ProjectCard>
 				<ProjectCard name="vuefullstack"
 					headerIcon="mdi:vuejs"
 					githubLink="https://github.com/juls0730/vuefullstack"
-					:icons="[{ 'icon': 'logos:vue', 'name': 'vue v3' }]"
-					link1="https://github.com/juls0730/vuefullstack"
-					button1="Github">
+					:icons="[{ 'icon': 'logos:vue', 'name': 'vue v3' }, { 'icon': 'logos:nodejs-icon', 'name': 'nodejs' }]">
 					this is a small forum project I made to mock my ruby on rails forum I am
 					working on but in vuejs.
 				</ProjectCard>
@@ -131,3 +116,8 @@
 	</div>
 </template>
   
+<script setup lang="ts">
+useHead({
+	title: 'Juls07',
+})
+</script>

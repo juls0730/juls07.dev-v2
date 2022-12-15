@@ -5,7 +5,8 @@ export default {
 </script>
 
 <template>
-	<div class="bg-[#201F20] border p-6 col-span-12 sm:col-span-10 sm:col-start-2 md:col-start-auto md:col-span-6 xl:!col-span-4 h-[494px] border-zinc-700/30 shadow-md rounded-lg">
+	<div
+		class="bg-[#201F20] relative border p-6 col-span-12 sm:col-span-10 sm:col-start-2 md:col-start-auto md:col-span-6 xl:!col-span-4 h-[60vw] max-h-[425px] min-h-[375px] border-zinc-700/30 shadow-md rounded-lg">
 		<div class="flex mb-4 items-center"
 			v-if="headerIcon">
 			<Icon size="64"
@@ -28,16 +29,16 @@ export default {
 			</div>
 		</div>
 		<h4 class="text-xl mb-1 capitalize font-jetbrains">{{ name }}</h4>
-		<div id="body" class="mb-4">
+		<div id="body"
+			class="mb-4">
 			<slot />
 		</div>
-		<div class="flex flex-wrap gap-2"
+		<div class="flex flex-wrap gap-2 absolute bottom-6"
 			v-if="icons">
-			<div v-for="icon in icons">
-				<IconButton size="16"
-					:name="icon.name"
-					:iconName="icon.icon"></IconButton>
-			</div>
+			<IconTag v-for="icon in icons"
+				size="16"
+				:name="icon.name"
+				:iconName="icon.icon"></IconTag>
 		</div>
 	</div>
 </template>

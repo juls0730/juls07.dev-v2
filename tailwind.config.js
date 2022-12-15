@@ -10,7 +10,12 @@ module.exports = {
     "./app.vue",
   ],
   theme: {
-    extend: {},
+    extend: {
+      screens: {
+        'xs': '512px',
+        '3xl': '1792px'
+      }
+    },
   },
   plugins: [],
 }

@@ -25,7 +25,7 @@
   
 <script setup lang="ts">
 import { useClipboard } from '@vueuse/core';
-const { copy, copied, text } = useClipboard();
+const { copy, copied } = useClipboard();
 const props = withDefaults(
 	defineProps<{
 		code?: string;

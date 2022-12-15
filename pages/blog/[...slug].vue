@@ -5,20 +5,20 @@
 			<ContentDoc v-slot="{ doc }">
 				<img :src="doc.image.src"
 					class="mb-2" />
-				<h1 class="text-3xl md:text-4xl font-semibold mb-2">{{ doc.title }}</h1>
+				<h1 class="text-3xl text-gray-100 md:text-4xl font-semibold mb-2">{{ doc.title }}</h1>
 				<p class="mb-1 text-zinc-400">
 					{{ doc.description }}
 				</p>
-				<p class="mb-2 text-zinc-600 dark:text-zinc-400">
+				<p class="mb-2 text-zinc-500">
 					{{ new Date(doc.date).toDateString().split(' ').slice(1).join(' ') }}
 				</p>
 				<div class="flex flex-wrap w-full gap-2 justify-start mb-7">
-					<IconButton v-for="tag in doc.tags"
+					<IconTag v-for="tag in doc.tags"
 						:name="tag"
 						:iconName='tag'
 						isTag="true" />
 				</div>
-				<ContentRenderer :value="doc" />
+				<ContentRenderer class="text-gray-200" :value="doc" />
 			</ContentDoc>
 		</div>
 	</main>
