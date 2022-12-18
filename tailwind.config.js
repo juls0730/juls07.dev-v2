@@ -14,6 +14,15 @@ module.exports = {
       screens: {
         'xs': '512px',
         '3xl': '1792px'
+      },
+      keyframes: {
+        blink: {
+          'from, to': { opacity: '0' },
+          '50%': { opacity: '1' },
+        }
+      },
+      animation: {
+        blink: 'blink 1s step-end infinite',
       }
     },
   },

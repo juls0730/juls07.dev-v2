@@ -7,16 +7,18 @@
 				<div
 					class="sm:h-32 sm:!col-start-2 sm:col-span-8 md:col-span-6 lg:col-span-5 w-32 sm:w-fit max-h-full md:h-40 items-center grid grid-rows-1 grid-cols-1 sm:grid-cols-2 drop-shadow-md">
 					<img alt="juls07 profile picture"
-						src="~/assets/pictues/juls07.png"
+						src="~/assets/images/juls07.png"
 						class="h-32 md:h-40 max-h-full rounded-full mb-3 sm:mb-0 sm:mr-2" />
 					<div class="grid grid-rows-5 grid-cols-1 h-fit">
 						<h1 class="text-4xl md:text-5xl row-span-3 font-jetbrains">Juls07</h1>
-						<p class="text-zinc-200 row-span-2 md:text-lg h-fit">Fullstack dev</p>
+						<p class="text-[#00FFC2] row-span-2 md:text-lg h-fit">
+							<span class="after:border after:h-[1.0em] after:border-current after:inline-block after:ml-0.5 after:animate-blink">{{ tagLine }}</span>
+						</p>
 					</div>
 				</div>
 			</div>
 		</header>
-		<main class="grid grid-cols-12 gap-5 justify-center">
+		<main id="main" class="grid grid-cols-12 gap-5 justify-center">
 			<section
 				class="py-6 mb-4 !col-start-2 md:!col-start-3 lg:!col-start-4 lg:col-span-6 md:col-span-8 col-span-10">
 				<h2 class="md:text-4xl text-3xl mb-1">About me</h2>
@@ -70,7 +72,8 @@
 			<div class="!col-start-2 md:!col-start-3 lg:!col-start-4 lg:col-span-6 md:col-span-8 col-span-10">
 				<h2 class="md:text-4xl text-3xl mb-1">Projects</h2>
 			</div>
-			<section class="pb-6 grid mb-4 col-start-2 xs:!col-start-3 col-span-10 xs:col-span-8 grid-cols-12 gap-y-6 sm:gap-x-6 max-w-full">
+			<section
+				class="pb-6 grid mb-4 col-start-2 xs:!col-start-3 col-span-10 xs:col-span-8 grid-cols-12 gap-y-6 sm:gap-x-6 max-w-full">
 				<ProjectCard name="Juls07.dev V2"
 					headerIcon="mdi:nuxt"
 					githubLink="https://github.com/juls0730/vuefullstack"
@@ -95,7 +98,8 @@
 					headerIcon="mdi:robot-excited-outline"
 					githubLink="https://github.com/juls0730/Echo"
 					:icons="[{ 'icon': 'logos:javascript', 'name': 'Javascript' }]">
-					This is one of the first projects that wasn't just a dinky website, this project brought me to where I am today.
+					This is one of the first projects that wasn't just a dinky website, this project brought me to where
+					I am today.
 				</ProjectCard>
 				<ProjectCard name="juls07.dev V1"
 					headerIcon="mdi:nuxt"
@@ -120,4 +124,53 @@
 useHead({
 	title: 'Juls07',
 })
+</script>
+
+<script lang="ts">
+export default {
+	data: () => {
+		return {
+			tagLine: "",
+			typeStatus: false,
+			displayTextArray: ["Fullstack dev", "Designer", "Blogger", "Freelancer"],
+			displayTextArrayIndex: 0,
+			charIndex: 0,
+		};
+	},
+	methods: {
+		typeText() {
+			if (this.charIndex < this.displayTextArray[this.displayTextArrayIndex].length) {
+				if (!this.typeStatus) this.typeStatus = true;
+				this.tagLine += this.displayTextArray[this.displayTextArrayIndex].charAt(
+					this.charIndex
+				);
+				this.charIndex += 1;
+				setTimeout(this.typeText, 100);
+			} else {
+				this.typeStatus = false;
+				setTimeout(this.eraseText, Math.min(Math.floor(Math.random() * 2001), 1750));
+			}
+		},
+		eraseText() {
+			if (this.charIndex > 0) {
+				if (!this.typeStatus) this.typeStatus = true;
+				this.tagLine = this.displayTextArray[this.displayTextArrayIndex].substring(
+					0,
+					this.charIndex - 1
+				);
+				this.charIndex -= 1;
+				setTimeout(this.eraseText, 50);
+			} else {
+				this.typeStatus = false;
+				this.displayTextArrayIndex += 1;
+				if (this.displayTextArrayIndex >= this.displayTextArray.length)
+					this.displayTextArrayIndex = 0;
+				setTimeout(this.typeText, 1100);
+			}
+		},
+	},
+	created() {
+		setTimeout(this.typeText, 2200);
+	},
+}
 </script>

@@ -25,11 +25,15 @@ export default defineNuxtConfig({
 		},
 	},
 
-	modules: ['nuxt-icon', '@nuxt/content'],
+	modules: ['nuxt-icon', '@nuxt/content', '@nuxt/image-edge'],
 
 	nitro: {
 		prerender: {
+			crawlLinks: true,
 			routes: ['/sitemap.xml']
+		},
+		experimental: {
+			payloadExtraction: true
 		}
 	},
 

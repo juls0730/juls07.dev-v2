@@ -1,6 +1,6 @@
 <template>
 	<Nav />
-	<main class="grid grid-cols-12 gap-5 justify-center">
+	<div class="grid grid-cols-12 gap-5 justify-center">
 		<div class="pt-6 mb-4 !col-start-2 md:!col-start-3 lg:!col-start-4 lg:col-span-6 md:col-span-8 col-span-10">
 			<ContentDoc v-slot="{ doc }">
 				<img :src="doc.image.src"
@@ -18,14 +18,18 @@
 						:iconName='tag'
 						isTag="true" />
 				</div>
-				<ContentRenderer class="text-gray-200" :value="doc" />
+				<main id="main">
+				<ContentRenderer
+					class="text-gray-200"
+					:value="doc" />
+				</main>
 			</ContentDoc>
+			</div>
 		</div>
-	</main>
-	<footer class="grid grid-cols-12 gap-5 justify-center">
-		<div class="py-2 mb-4 !col-start-3 md:!col-start-4 xl:!col-start-5 xl:col-span-4 md:col-span-6 col-span-8">
-			<!-- <NewsletterSignup class="mb-2" /> -->
-			© 2022 Juls07 - GPL v3.0 License
-		</div>
-	</footer>
+		<footer class="grid grid-cols-12 gap-5 justify-center">
+			<div class="py-2 mb-4 !col-start-3 md:!col-start-4 xl:!col-start-5 xl:col-span-4 md:col-span-6 col-span-8">
+				<!-- <NewsletterSignup class="mb-2" /> -->
+				© 2022 Juls07 - GPL v3.0 License
+			</div>
+		</footer>
 </template>

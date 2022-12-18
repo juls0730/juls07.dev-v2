@@ -13,16 +13,16 @@ export default {
 				class="text-[#00FFC2]"
 				:name="headerIcon" />
 			<div role="links"
-				class="ml-auto">
+				class="ml-auto flex">
 				<a v-if="githubLink"
 					:href="githubLink"
-					class="text-zinc-300/80 hover:text-zinc-200 transition-colors duration-300">
+					class="text-zinc-300/80 hover:text-zinc-200 focus:text-zinc-200 rounded transition-colors duration-300 focus:outline-3 focus:outline focus:outline-[#EB0066]">
 					<Icon size="38"
 						name="tabler:brand-github" />
 				</a>
 				<a v-if="externalLink"
 					:href="externalLink"
-					class="text-zinc-300/80 hover:text-zinc-200 transition-colors duration-300">
+					class="text-zinc-300/80 hover:text-zinc-200 focus:text-zinc-200 rounded transition-colors duration-300 focus:outline-3 focus:outline focus:outline-[#EB0066]">
 					<Icon size="38"
 						name="tabler:external-link" />
 				</a>

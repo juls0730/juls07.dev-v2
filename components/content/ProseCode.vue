@@ -1,21 +1,24 @@
 <template>
-	<div class="container my-2 bg-neutral-900">
+	<div
+		class="container my-2 bg-neutral-900">
 		<span v-if="filename"
 			class="filename-text text-xs leading-none tracking-tight text-gray-400 font-jetbrains">
 			{{ filename }}
 		</span>
-		<slot />
+			<slot />
 		<div class="bottom-container">
 			<div class="copy-container">
 				<button class="rounded hover:bg-zinc-800/60 transition-colors duration-200 flex p-1"
-					@click="copy(code)">
+					@click="copy(code)" @keypress.space="copy(code)">
 					<div class="h-6"
 						v-if="copied">
-						<Icon size="24" name="tabler:check" />
+						<Icon size="24"
+							name="tabler:check" />
 					</div>
 					<div class="h-6"
 						v-else>
-						<Icon size="24" name="tabler:copy" />
+						<Icon size="24"
+							name="tabler:copy" />
 					</div>
 				</button>
 			</div>
@@ -31,9 +34,9 @@ const props = withDefaults(
 		code?: string;
 		language?: string | null;
 		filename?: string | null;
-		highlights?: Array<number>;
+		highlights?: Array<any>;
 	}>(),
-	{ code: '', language: null, filename: null, highlights: [] }
+	{ code: '', language: null, filename: null, highlights: undefined }
 );
 </script>
   
@@ -49,7 +52,7 @@ const props = withDefaults(
 	border-radius: 0.5rem;
 }
 
-.container:hover .bottom-container {
+.container:is(:hover, :focus-within) .bottom-container {
 	opacity: 1;
 	pointer-events: all;
 }

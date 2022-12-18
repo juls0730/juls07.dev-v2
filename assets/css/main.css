@@ -14,7 +14,7 @@ body {
 
 header,
 .blur-background::before {
-	background-image: url(~/assets/pictues/header.min.jpg);
+	background-image: url(~/assets/images/header.jpg);
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -33,7 +33,7 @@ header,
 	right: 0;
 	bottom: 0;
 	left: 0;
-	filter: blur(12px) saturate(115%);
+	filter: blur(16px) saturate(115%);
 }
 
 a {
