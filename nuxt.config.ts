@@ -12,7 +12,10 @@ export default defineNuxtConfig({
 
 				// hid is used as unique identifier. Do not use `vmid` for it as it will not work
 				{ hid: 'description', name: 'description', content: 'Juls07 is a fullstack web developer' }
-			]
+			],
+			htmlAttrs: {
+				lang: 'en'
+			}
 		},
 	},
 
@@ -37,7 +40,7 @@ export default defineNuxtConfig({
 		}
 	},
 
-	content: {		
+	content: {
 		highlight: {
 			theme: {
 				default: 'github-dark'

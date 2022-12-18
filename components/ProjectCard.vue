@@ -12,10 +12,10 @@ export default {
 			<Icon size="64"
 				class="text-[#00FFC2]"
 				:name="headerIcon" />
-			<div role="links"
-				class="ml-auto flex">
+			<div class="ml-auto flex">
 				<a v-if="githubLink"
 					:href="githubLink"
+					:aria-label="`${name}'s Gtihub`"
 					class="text-zinc-300/80 hover:text-zinc-200 focus:text-zinc-200 rounded transition-colors duration-300 focus:outline-3 focus:outline focus:outline-[#EB0066]">
 					<Icon size="38"
 						name="tabler:brand-github" />
@@ -28,7 +28,7 @@ export default {
 				</a>
 			</div>
 		</div>
-		<h4 class="text-xl mb-1 capitalize font-jetbrains">{{ name }}</h4>
+		<h3 class="text-xl mb-1 capitalize font-jetbrains">{{ name }}</h3>
 		<div id="body"
 			class="mb-4">
 			<slot />
