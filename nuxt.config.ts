@@ -19,10 +19,6 @@ export default defineNuxtConfig({
 		},
 	},
 
-	image: {
-		provider: 'ipx'
-	},
-
 	css: ['~/assets/css/main.css'],
 
 	postcss: {
@@ -32,7 +28,7 @@ export default defineNuxtConfig({
 		},
 	},
 
-	modules: ['nuxt-icon', '@nuxt/content', '@nuxt/image-edge'],
+	modules: ['nuxt-icon', '@nuxt/content'],
 
 	nitro: {
 		prerender: {

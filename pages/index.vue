@@ -6,9 +6,8 @@
 				class="p-6 bg-[#12121233] justify-center grid sm:grid-cols-12 gap-5 items-center sm:justify-start w-full h-full blur-background">
 				<div
 					class="sm:h-32 sm:!col-start-2 sm:col-span-8 md:col-span-6 lg:col-span-5 w-32 sm:w-fit max-h-full md:h-40 items-center grid grid-rows-1 grid-cols-1 sm:grid-cols-2 drop-shadow-md">
-					<nuxt-img alt="juls07 profile picture"
-						src="/images/juls07.png"
-						sizes="128px md:160px"
+					<img alt="juls07 profile picture"
+						src="~/assets/images/juls07.png"
 						class="h-32 md:h-40 max-h-full rounded-full mb-3 sm:mb-0 sm:mr-2" />
 					<div class="grid grid-rows-5 grid-cols-1 h-fit">
 						<h1 class="text-4xl md:text-5xl row-span-3 font-jetbrains">Juls07</h1>
