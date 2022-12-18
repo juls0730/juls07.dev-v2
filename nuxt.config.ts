@@ -19,6 +19,10 @@ export default defineNuxtConfig({
 		},
 	},
 
+	image: {
+		provider: 'static'
+	},
+
 	css: ['~/assets/css/main.css'],
 
 	postcss: {
