@@ -80,7 +80,7 @@
 				class="pb-6 grid mb-4 col-start-2 xs:!col-start-3 col-span-10 xs:col-span-8 grid-cols-12 gap-y-6 sm:gap-x-6 max-w-full">
 				<ProjectCard name="Juls07.dev V2"
 					headerIcon="mdi:nuxt"
-					githubLink="https://github.com/juls0730/vuefullstack"
+					githubLink="https://github.com/juls0730/juls07.dev-v2"
 					:icons="[{ 'icon': 'logos:nuxt-icon', 'name': 'nuxtjs v3' }, { 'icon': 'logos:supabase-icon', 'name': 'supabase' }]">
 					this is a small forum project I made to mock my ruby on rails forum I am
 					working on but in vuejs.
