@@ -2,7 +2,7 @@
 title: Why I chose archlinux
 description: All of my reasons for choosing archlinux
 image: 
-    src:  /images/archlinux.png
+    src:  /images/archlinux.webp
     alt: "Why I chose archlinux"
 head:
   meta:

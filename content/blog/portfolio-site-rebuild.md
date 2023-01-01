@@ -2,7 +2,7 @@
 title: Rebuilding my personal website!
 description: My experiences with nuxtjs 3 and tRPC
 image: 
-    src: '/images/website-rebuild.png'
+    src: '/images/website-rebuild.webp'
     alt: 'placeholder'
 head:
   meta:

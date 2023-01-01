@@ -2,7 +2,7 @@
 title: Running a qbittorrent webserver!
 description: My experience with a qbittorrent webserver
 image: 
-    src: '/images/qbittorrent-web.png'
+    src: '/images/qbittorrent-web.webp'
     alt: 'Qbittorrent web server'
 head:
   meta:

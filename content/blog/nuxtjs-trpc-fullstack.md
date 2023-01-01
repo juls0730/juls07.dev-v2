@@ -2,7 +2,7 @@
 title: My nuxtjs + trpc fullstack web app
 description: My experiences with nuxtjs 3 and tRPC
 image: 
-    src: '/images/archlinux.png'
+    src: '/images/archlinux.webp'
     alt: 'Why I chose archlinux'
 head:
   meta:

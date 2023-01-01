@@ -2,7 +2,7 @@
 title: My 100DaysOfCode Challenge
 description: A review of my 100DaysOfCode challenge
 image: 
-    src: '/images/100DaysOfCode-overview.png'
+    src: '/images/100DaysOfCode-overview.webp'
     alt: 'How I made my site fast'
 head:
   meta:

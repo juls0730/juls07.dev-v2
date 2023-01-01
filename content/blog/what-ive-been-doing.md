@@ -2,7 +2,7 @@
 title: What I've been doing
 description: Stuff I've been doing recently
 image: 
-    src: '/images/what-ive-been-doing.png'
+    src: '/images/what-ive-been-doing.webp'
     alt: "What I've been doing recently"
 head:
   meta:

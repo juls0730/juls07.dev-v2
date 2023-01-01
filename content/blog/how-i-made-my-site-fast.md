@@ -2,7 +2,7 @@
 title: How I made my site fast
 description: How I made my social media site fast
 image: 
-    src: '/images/how-i-made-my-site-fast.png'
+    src: '/images/how-i-made-my-site-fast.webp'
     alt: 'How I made my site fast'
 head:
   meta:
