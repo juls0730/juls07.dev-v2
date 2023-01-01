@@ -13,7 +13,7 @@
 							:src="article.image.src"
 							class="w-full rounded-tl-lg rounded-tr-lg aspect-video" />
 						<div
-							class="p-3 overflow-hidden pt-2 before:w-full before:h-2/6 before:absolute before:left-0 before:bottom-0 before:bg-gradient-to-b before:from-transparent before:to-[#201F20] mb-1 pb-1 relative">
+							class="p-3 overflow-hidden pt-2 text-fade mb-1 pb-1 relative">
 							<h3>
 								<nuxt-link tabindex="0"
 									class="text-lg"
@@ -27,7 +27,7 @@
 							<p class="text-zinc-500">
 								{{ new Date(article.date).toDateString().split(' ').slice(1).join(' ') }}
 							</p>
-							<p class="text-zinc-200 max-h-56">
+							<p class="text-zinc-200 max-h-[13.75rem]">
 								<ContentDoc :head="false"
 									:value="article"
 									:path="article._path"
@@ -38,8 +38,10 @@
 											:iconName='tag'
 											isTag="true" />
 									</div>
-									<ContentRenderer :value="doc"
-										:excerpt="true" />
+									<div class="max-h-full">
+										<ContentRenderer :value="doc"
+											:excerpt="true" />
+									</div>
 								</ContentDoc>
 							</p>
 						</div>
@@ -50,8 +52,21 @@
 	</div>
 </template>
 
+<style>
+.text-fade::before {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 33.333333%;
+	left: 0px;
+	bottom: 0px;
+	background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(12,12,12,0) 36%, rgba(32,31,32,1) 95%, rgba(32,31,32,1) 100%);
+}
+</style>
+
 <script setup lang="ts">
 const { data: articles } = await useAsyncData('posts-list', () => queryContent('/blog')
+	.only(['image', '_path', 'title', 'description', 'date'])
 	.where({ _draft: false })
 	.sort({ date: -1, $numeric: true, })
 	.find()

@@ -1,5 +1,5 @@
 <template>
-	<code lang="js">
+	<code>
 		<slot />
 	</code>
 </template>

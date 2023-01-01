@@ -12,30 +12,6 @@ body {
 	z-index: 0;
 }
 
-header,
-.blur-background::before {
-	background-image: url(~/assets/images/header.jpg);
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-}
-
-.blur-background {
-	position: relative;
-	overflow: hidden;
-}
-
-.blur-background::before {
-	content: '';
-	margin: -35px;
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	filter: blur(16px) saturate(115%);
-}
-
 a {
 	@apply text-rose-500 hover:underline visited:bg-rose-700;
 }
@@ -49,15 +25,6 @@ kbd,
 pre,
 samp {
 	font-family: 'JetBrains Mono', monospace;
-}
-
-.font-inter {
-	font-family: 'Inter';
-}
-
-.blog-post-img {
-	border-top-left-radius: 0.5rem;
-	border-top-right-radius: 0.5rem;
 }
 
 .text-overflow:before {

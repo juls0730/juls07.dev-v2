@@ -30,6 +30,10 @@ export default defineNuxtConfig({
 
 	modules: ['nuxt-icon', '@nuxt/content'],
 
+	image: {
+		provider: 'ipx'
+	},
+
 	nitro: {
 		prerender: {
 			crawlLinks: true,

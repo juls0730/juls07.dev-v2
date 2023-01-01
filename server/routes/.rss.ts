@@ -1,0 +1,22 @@
+import { serverQueryContent } from '#content/server'
+import RSS from 'rss'
+
+export default defineEventHandler(async (event) => {
+  // Fetch all documents
+  const docs = await serverQueryContent(event).find()
+  const feed = new RSS({
+    title: 'Juls07',
+    description: 'Juls07\'s blogs',
+    link: 'https://juls07.dev/blogs'
+  })
+
+  for (const doc of docs) {
+    feed.item({
+      title: doc.title,
+      description: doc.description,
+      image_url: doc.image.src
+    })
+  }
+
+  return feed.xml({ indent: true })
+})

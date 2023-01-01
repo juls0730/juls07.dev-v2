@@ -3,7 +3,7 @@
 		<Nav class="absolute z-10" />
 		<header class="w-full h-3/6 sm:h-2/5 md:h-3/5">
 			<div
-				class="p-6 bg-[#12121233] justify-center grid sm:grid-cols-12 gap-5 items-center sm:justify-start w-full h-full blur-background">
+				class="p-6 bg-[#1212121A] justify-center grid sm:grid-cols-12 gap-5 items-center sm:justify-start w-full h-full blur-background">
 				<div
 					class="sm:h-32 sm:!col-start-2 sm:col-span-8 md:col-span-6 lg:col-span-5 w-32 sm:w-fit max-h-full md:h-40 items-center grid grid-rows-1 grid-cols-1 sm:grid-cols-2 drop-shadow-md">
 					<img alt="juls07 profile picture"
@@ -124,6 +124,32 @@
 	</div>
 </template>
   
+<style scoped>
+.blur-background {
+	position: relative;
+	overflow: hidden;
+}
+
+.blur-background::before {
+	content: '';
+	margin: -35px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	filter: blur(16px) saturate(125%);
+}
+
+header,
+.blur-background::before {
+	background-image: url(~/assets/images/header.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+</style>
+
 <script setup lang="ts">
 useHead({
 	title: 'Juls07',
