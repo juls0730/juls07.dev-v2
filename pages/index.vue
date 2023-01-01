@@ -119,6 +119,12 @@
 					this is a small forum project I made to mock my ruby on rails forum I am
 					working on but in vuejs.
 				</ProjectCard>
+				<ProjectCard name="100DaysOfCode"
+					headerIcon="mdi:nodejs"
+					githubLink="https://github.com/juls0730/vuefullstack"
+					:icons="[{ 'icon': 'logos:nodejs-icon', 'name': 'nodejs' }]">
+					This is my #100DaysOfCode challenge, my challenge was to create my own UI framework thing, check out a <nuxt-link to="/blog/100daysofcode-challenge">large overview of my 100DaysOfCode challenge</nuxt-link> on my blog.
+				</ProjectCard>
 			</section>
 		</main>
 	</div>
