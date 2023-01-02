@@ -14,7 +14,7 @@ head:
       content: 'juls07'
     - name: 'copyright'
       content: '© 2022 juls07'
-date: 2023-01-02
+date: 2023-01-01
 tags:
   - web dev
   - nodejs
