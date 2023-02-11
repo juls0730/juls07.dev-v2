@@ -16,6 +16,7 @@ export default defineEventHandler(async (event) => {
       title: doc.title,
       description: doc.description,
       image_url: doc.image.src,
+      date: doc.date
     })
   }
 
