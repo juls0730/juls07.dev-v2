@@ -15,6 +15,7 @@ export default defineEventHandler(async (event) => {
     feed.item({
       title: doc.title,
       description: doc.description,
+      url: `https://juls07.dev${doc._path}`,
       image_url: doc.image.src,
       date: doc.date
     })
