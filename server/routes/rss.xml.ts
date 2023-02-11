@@ -1,4 +1,5 @@
 import { serverQueryContent } from '#content/server'
+import { streamToPromise } from 'sitemap'
 import RSS from 'rss'
 
 export default defineEventHandler(async (event) => {

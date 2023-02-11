@@ -3,7 +3,7 @@ import { SitemapStream, streamToPromise } from 'sitemap'
 
 export default defineEventHandler(async (event) => {
   // Fetch all documents
-  const docs = await serverQueryContent(event).find()
+  const docs = await serverQueryContent(event).where({ _draft: false }).find()
   const sitemap = new SitemapStream({
     hostname: 'https://juls07.dev'
   })
