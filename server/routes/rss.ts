@@ -3,7 +3,7 @@ import RSS from 'rss'
 
 export default defineEventHandler(async (event) => {
   // Fetch all documents
-  const docs = await serverQueryContent(event).find()
+  const docs = await serverQueryContent(event).where({ _draft: false }).find()
   const feed = new RSS({
     title: 'Juls07',
     description: 'Juls07\'s blogs',
@@ -14,7 +14,7 @@ export default defineEventHandler(async (event) => {
     feed.item({
       title: doc.title,
       description: doc.description,
-      image_url: doc.image.src
+      image_url: doc.image.src,
     })
   }
 
