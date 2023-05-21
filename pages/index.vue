@@ -41,36 +41,38 @@
 				</p>
 				<h3 class="text-2xl md:text-3xl mb-1.5 ml-0.5">Skills</h3>
 				<section class="flex flex-wrap w-full gap-2 justify-start ml-1">
-					<IconTag name="Javascript"
-						iconName='logos:javascript' />
+					<IconTag name="TypeScript"
+						iconName="skill-icons:typescript" />
 					<IconTag name="Nuxt.js"
-						iconName="logos:nuxt-icon" />
+						iconName="skill-icons:nuxtjs-dark" />
+					<IconTag name="Vue.js"
+						iconName="skill-icons:vuejs-dark" />
 					<IconTag name="Ruby on rails"
-						iconName="logos:ruby" />
+						iconName="skill-icons:rails" />
 					<IconTag name="php"
-						iconName="logos:laravel" />
-					<IconTag name="Angular"
-						iconName="logos:angular-icon" />
+						iconName="skill-icons:php-dark" />
 					<IconTag name="React"
-						iconName="logos:react" />
+						iconName="skill-icons:react-dark" />
 					<IconTag name="Bash"
-						iconName="logos:bash-icon" />
+						iconName="skill-icons:bash-dark" />
 					<IconTag name="Tailwindcss"
-						iconName="logos:tailwindcss-icon" />
+						iconName="skill-icons:tailwindcss-dark" />
 					<IconTag name="Rust"
-						iconName="logos:rust" />
+						iconName="skill-icons:rust" />
 					<IconTag name="Node.js"
-						iconName="logos:nodejs-icon" />
+						iconName="skill-icons:nodejs-dark" />
 					<IconTag name="Svelte"
-						iconName="logos:svelte-icon" />
-					<IconTag name="Supabase"
-						iconName="logos:supabase-icon" />
-					<IconTag name="tRPC"
-						iconName="logos:trpc" />
-					<IconTag name="Python"
-						iconName="logos:python" />
-					<IconTag name="Deno"
-						iconName="logos:deno" />
+						iconName="skill-icons:svelte" />
+					<IconTag name="Figma"
+						iconName="skill-icons:figma-dark" />
+					<IconTag name="Electron"
+						iconName="skill-icons:electron" />
+					<IconTag name="Cypress"
+						iconName="logos:cypress-icon" />
+					<IconTag name="Prisma"
+						iconName="skill-icons:prisma" />
+					<IconTag name="Docker"
+						icon-name="skill-icons:docker" />
 				</section>
 			</section>
 			<div class="!col-start-2 md:!col-start-3 lg:!col-start-4 lg:col-span-6 md:col-span-8 col-span-10">
@@ -79,9 +81,9 @@
 			<section
 				class="pb-6 grid mb-4 col-start-2 xs:!col-start-3 col-span-10 xs:col-span-8 grid-cols-12 gap-y-6 sm:gap-x-6 max-w-full">
 				<ProjectCard name="Juls07.dev V2"
-					headerIcon="mdi:nuxt"
+					headerIcon="tabler:brand-nuxt"
 					githubLink="https://github.com/juls0730/juls07.dev-v2"
-					:icons="[{ 'icon': 'logos:nuxt-icon', 'name': 'nuxtjs v3' }, { 'icon': 'logos:supabase-icon', 'name': 'supabase' }]">
+					:icons="[{ 'icon': 'logos:nuxt-icon', 'name': 'nuxtjs v3' }]">
 					this is a small forum project I made to mock my ruby on rails forum I am
 					working on but in vuejs.
 				</ProjectCard>
@@ -92,7 +94,7 @@
 					This is my attempt at a forum written in php, its not great but it works.
 				</ProjectCard>
 				<ProjectCard name="Cyansplash.net"
-					headerIcon="mdi:nuxt"
+					headerIcon="tabler:brand-nuxt"
 					githubLink="https://github.com/juls0730/cyansplash.net"
 					:icons="[{ 'icon': 'logos:nuxt-icon', 'name': 'nuxtjs v2' }]">
 					This is the old cyansplash.net site, not amazing but taught me a lot about web
@@ -106,14 +108,14 @@
 					I am today.
 				</ProjectCard>
 				<ProjectCard name="juls07.dev V1"
-					headerIcon="mdi:nuxt"
+					headerIcon="tabler:brand-nuxt"
 					githubLink="https://github.com/juls0730/juls07.dev"
 					:icons="[{ 'icon': 'logos:nuxt-icon', 'name': 'nuxtjs v2' }, { 'icon': 'logos:tailwindcss-icon', 'name': 'tailwindcss' }]">
 					This stie is the site you are currently on, this site is just a place to show
 					off my projects and my skills.
 				</ProjectCard>
 				<ProjectCard name="vuefullstack"
-					headerIcon="mdi:vuejs"
+					headerIcon="tabler:brand-vue"
 					githubLink="https://github.com/juls0730/vuefullstack"
 					:icons="[{ 'icon': 'logos:vue', 'name': 'vue v3' }, { 'icon': 'logos:nodejs-icon', 'name': 'nodejs' }]">
 					this is a small forum project I made to mock my ruby on rails forum I am
