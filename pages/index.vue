@@ -84,8 +84,7 @@
 					headerIcon="tabler:brand-nuxt"
 					githubLink="https://github.com/juls0730/juls07.dev-v2"
 					:icons="[{ 'icon': 'logos:nuxt-icon', 'name': 'nuxtjs v3' }]">
-					this is a small forum project I made to mock my ruby on rails forum I am
-					working on but in vuejs.
+					This is the site you're currently on, a simple but decent looking portfolio and blog site.
 				</ProjectCard>
 				<ProjectCard name="PHP Forum"
 					headerIcon="mdi:language-php"
@@ -111,14 +110,13 @@
 					headerIcon="tabler:brand-nuxt"
 					githubLink="https://github.com/juls0730/juls07.dev"
 					:icons="[{ 'icon': 'logos:nuxt-icon', 'name': 'nuxtjs v2' }, { 'icon': 'logos:tailwindcss-icon', 'name': 'tailwindcss' }]">
-					This stie is the site you are currently on, this site is just a place to show
-					off my projects and my skills.
+					This is my original portfolio website, it isn't much and it definitely isn't the best thing I've ever written, but it's something.
 				</ProjectCard>
 				<ProjectCard name="vuefullstack"
 					headerIcon="tabler:brand-vue"
 					githubLink="https://github.com/juls0730/vuefullstack"
 					:icons="[{ 'icon': 'logos:vue', 'name': 'vue v3' }, { 'icon': 'logos:nodejs-icon', 'name': 'nodejs' }]">
-					this is a small forum project I made to mock my ruby on rails forum I am
+					This is a small forum project I made to mock my ruby on rails forum I am
 					working on but in vuejs.
 				</ProjectCard>
 				<ProjectCard name="100DaysOfCode"
